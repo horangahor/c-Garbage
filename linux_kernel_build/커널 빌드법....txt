@@ -14,6 +14,7 @@ scripts/config --disable SYSTEM_TRUSTED_KEYS
 scripts/config --disable SYSTEM_REVOCATION_KEYS // 인증서 에러를 막기 위해서
 
 make -j$(nproc)   # 멀티코어 빌드 (코어 수에 맞게 병렬 처리) : 커널 빌드: 빌드를 시작합니다. make 명령어를 사용하여 커널을 컴파일합니다. 다수의 CPU 코어를 사용하는 시스템에서는 병렬 빌드를 진행하는 것이 좋습니다. 예를 들어 4코어 시스템에서는 -j4를 사용합니다.
+make modules : 모듈 형태로 설정된 커널 컴포넌트들을 컴파일한다.
 sudo make modules_install : 이 명령어는 커널 모듈을 설치하고, 커널 이미지를 /boot 디렉토리에 설치합니다.
 sudo make install : 커널을 설치하려면 다음 명령어를 사용합니다:
 sudo update-grub : 부팅 로더를 업데이트하여 새 커널을 부팅할 수 있게 합니다.
